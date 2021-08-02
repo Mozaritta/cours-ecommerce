@@ -8,13 +8,17 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController
 {
+    /**
+     * @Route("/", name="index", methods={"GET","POST"},
+     * host="localhost", schemes={"http","https"})
+     */
     public function index()
     {
         dump("It's working"); // a beautiful var_dump
         die();
     }
     /**
-     * @Route("/test/{age<\d+>?0}", name="test", method={"GET", "POST"},
+     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET", "POST"},
      * host="localhost", schemes={"http","https"})
      * 
      */
